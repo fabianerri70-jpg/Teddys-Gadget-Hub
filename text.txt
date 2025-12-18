@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teddy's Gadget Hub Celebration</title>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #ffcccc, #ccffcc, #ccccff);
+        color: #333;
+        text-align: center;
+        padding: 50px;
+        overflow-x: hidden;
+    }
+    h1 {
+        font-size: 3em;
+        color: #e60000;
+        margin-bottom: 20px;
+        position: relative;
+    }
+    h1::before {
+        content: "🎩";
+        position: absolute;
+        left: -40px;
+        top: -20px;
+        font-size: 1.5em;
+        transform: rotate(-20deg);
+    }
+    p {
+        font-size: 1.2em;
+        max-width: 700px;
+        margin: 20px auto;
+        line-height: 1.6;
+    }
+    .highlight {
+        color: #ff6600;
+        font-weight: bold;
+    }
+    footer {
+        margin-top: 40px;
+        font-size: 1em;
+        color: #444;
+    }
+    /* Confetti */
+    .confetti {
+        position: fixed;
+        width: 10px;
+        height: 10px;
+        background-color: red;
+        top: -10px;
+        animation: fall 3s linear infinite;
+        z-index: 9999;
+    }
+    @keyframes fall {
+        0% { transform: translateY(0) rotate(0deg); }
+        100% { transform: translateY(100vh) rotate(360deg); }
+    }
+</style>
+</head>
+<body>
+
+<h1>🎉 Happy Birthday in Advance! 🎉</h1>
+
+<p>Hello, amazing friends, customers, and well-wishers!</p>
+
+<p>I’m <span class="highlight">[Your Name]</span>, CEO of <span class="highlight">Teddy’s Gadget Hub</span>, and I want to take a moment to <strong>thank each and every one of you</strong> for your incredible support throughout the year. Your trust, loyalty, and encouragement mean the world to me and the whole team. I truly <strong>couldn’t have come this far without you!</strong> 💖</p>
+
+<p>With my birthday coming up this Sunday, I want to share the celebration with all of you! As the festive season approaches, I also wish you a <strong>Merry Christmas</strong> 🎄 and a <strong>Happy New Year in advance!</strong> 🥳 May your holidays be filled with joy, laughter, and countless blessings.</p>
+
+<p>Thank you for being part of our journey – you are more than customers; you’re family. Here’s to another amazing year ahead together! ✨</p>
+
+<footer>
+With gratitude and warm wishes,<br>
+<strong>[Your Name], CEO of Teddy’s Gadget Hub</strong>
+</footer>
+
+<script>
+    // Confetti effect
+    function createConfetti() {
+        const confetti = document.createElement('div');
+        confetti.classList.add('confetti');
+        confetti.style.left = Math.random() * window.innerWidth + 'px';
+        confetti.style.backgroundColor = `hsl(${Math.random()*360}, 100%, 50%)`;
+        confetti.style.width = confetti.style.height = Math.random() * 10 + 5 + 'px';
+        document.body.appendChild(confetti);
+        setTimeout(() => confetti.remove(), 3000);
+    }
+    setInterval(createConfetti, 200);
+</script>
+
+</body>
+</html>
